@@ -12,6 +12,10 @@
   [![](https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white)](https://github.com/Aleksoid1978/MPC-BE)
   [![](https://img.shields.io/badge/DirectX%209%20·%20SM%203.0-FF7B00?style=flat-square)](#требования)
   [![](https://img.shields.io/badge/лицензия-MIT-22AA44?style=flat-square)](LICENSE)
+
+  <br>
+
+  **[⬇ Скачать AmbientGlow_Setup.exe](https://github.com/elementalmasterpotap/mpc-be-ambient-shaders/releases/download/v1.2.4/AmbientGlow_Setup.exe)**
 </div>
 
 ---
