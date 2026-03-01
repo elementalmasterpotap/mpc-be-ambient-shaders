@@ -15,7 +15,7 @@
 
   <br>
 
-  **[⬇ AmbientGlow_Setup.exe](https://github.com/elementalmasterpotap/mpc-be-ambient-shaders/releases/download/v1.2.4/AmbientGlow_Setup.exe)** — GUI-установщик, один клик &nbsp;·&nbsp; **[⬇ Полный архив .zip](https://github.com/elementalmasterpotap/mpc-be-ambient-shaders/releases/download/v1.2.4/MPC-BE.Ambient.Lighting.v1.2.4.zip)** — шейдер + установщики
+  **[⬇ MPC-BE.Ambient.Lighting.v1.2.4.zip](https://github.com/elementalmasterpotap/mpc-be-ambient-shaders/releases/download/v1.2.4/MPC-BE.Ambient.Lighting.v1.2.4.zip)** — шейдер, GUI-установщик, консольные скрипты
 </div>
 
 ---
