@@ -1,0 +1,20 @@
+# Дистрибутивные архивы
+*.7z
+*.zip
+*.rar
+
+# Авто-обновляется при каждом install.ps1 — в git-истории не нужен
+docs/ProfessionalLighting_SM3.prev.hlsl
+
+# Личные копии глобального конфига Claude
+.claude/settings.local.json
+.claude/universal-rules.md
+.claude/universal-memory.md
+
+# IDE
+.vscode/
+
+# Windows
+Thumbs.db
+desktop.ini
+[Dd]esktop.ini
