@@ -22,9 +22,11 @@
 
   Not just a blur. Full post-processing pipeline: vivid colors, cinematic tone mapping, film glow, vignette, chromatic aberration. The detector finds black bars automatically — no manual setup needed.
 
+  Designed for **4:3 content hard-encoded into 16:9 containers** (pillarbox) — the most common case for classic TV shows and retro content.
+
   ## Installation
 
-  Run **`AmbientGlow_Setup.exe`** — dark window, click Install, done.
+  Run **`ProfessionalLighting_Setup.exe`** — dark window, click Install, done.
 
   Or via console:
 
@@ -45,7 +47,10 @@
   View → Shader → Post-Processing
   ```
 
-  Select `AmbientGlow_SM3_Ready.hlsl`, click OK. Effect applies instantly, no restart needed.
+  Select `ProfessionalLighting_SM3_Ready.hlsl`, click OK. Effect applies instantly, no restart needed.
+
+  > **Video renderer must be set to madVR** — the shader requires madVR for correct post-processing.
+  > Settings → Video → Video Renderer → madVR
 
   > **[Nightly build of MPC-BE](https://github.com/Aleksoid1978/MPC-BE/wiki/Nightly-builds) recommended** — stable releases sometimes have shader bugs.
 
@@ -78,7 +83,7 @@
 
   ## Uninstall
 
-  Via `AmbientGlow_Setup.exe` → Uninstall button, or:
+  Via `ProfessionalLighting_Setup.exe` → Uninstall button, or:
 
   ```powershell
   .\uninstall.ps1
@@ -111,9 +116,11 @@
 
   Не просто размытие. Полноценная постобработка: живые цвета, кино-компрессия яркости, плёночный ореол, виньетка, хроматическая аберрация. Детектор сам видит где полосы — ничего настраивать вручную не нужно.
 
+  Заточен под **4:3 контент, жёстко закодированный в 16:9 контейнер** (pillarbox) — самый частый случай для классических сериалов и ретро-контента.
+
   ## Установка
 
-  Запустить **`AmbientGlow_Setup.exe`** — тёмное окно, кнопка «Установить», готово.
+  Запустить **`ProfessionalLighting_Setup.exe`** — тёмное окно, кнопка «Установить», готово.
 
   Или через консоль:
 
@@ -134,7 +141,10 @@
   View → Shader → Post-Processing
   ```
 
-  Выбрать `AmbientGlow_SM3_Ready.hlsl`, нажать OK. Эффект применяется сразу, без перезапуска.
+  Выбрать `ProfessionalLighting_SM3_Ready.hlsl`, нажать OK. Эффект применяется сразу, без перезапуска.
+
+  > **Рендер видео должен быть madVR** — шейдер требует madVR для корректной постобработки.
+  > Настройки → Видео → Рендер видео → madVR
 
   > **Рекомендуется [ночной билд MPC-BE](https://github.com/Aleksoid1978/MPC-BE/wiki/Nightly-builds)** — в стабильных релизах иногда баги с шейдерами постобработки.
 
@@ -167,7 +177,7 @@
 
   ## Удаление
 
-  Через `AmbientGlow_Setup.exe` кнопка «Удалить», или:
+  Через `ProfessionalLighting_Setup.exe` кнопка «Удалить», или:
 
   ```powershell
   .\uninstall.ps1

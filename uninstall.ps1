@@ -2,7 +2,7 @@
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 $targetDir    = Join-Path $env:APPDATA "MPC-BE\Shaders"
-$manifestPath = Join-Path $targetDir "AmbientGlow_InstallManifest.json"
+$manifestPath = Join-Path $targetDir "ProfessionalLighting_InstallManifest.json"
 
 # ─────────────────────────────────────────────────────────────
 #  ЯЗЫК / LANGUAGE
@@ -118,13 +118,13 @@ function Write-BoxEmpty  { Write-BoxLine }
 function Get-FileList {
     $defaults = @(
         "ProfessionalLighting_SM3.hlsl",
-        "AmbientGlow_SM3_Ready.hlsl",
-        "AmbientGlow_InstallManifest.json"
+        "ProfessionalLighting_SM3_Ready.hlsl",
+        "ProfessionalLighting_InstallManifest.json"
     )
     if (Test-Path $manifestPath) {
         try {
             $m = Get-Content -Raw $manifestPath | ConvertFrom-Json
-            if ($m.files) { return @($m.files) + @("AmbientGlow_InstallManifest.json") }
+            if ($m.files) { return @($m.files) + @("ProfessionalLighting_InstallManifest.json") }
         } catch {}
     }
     return $defaults

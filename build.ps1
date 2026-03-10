@@ -1,8 +1,8 @@
 $csc = "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe"
-$out = Join-Path $PSScriptRoot "AmbientGlow_Setup.exe"
+$out = Join-Path $PSScriptRoot "ProfessionalLighting_Setup.exe"
 $src = Join-Path $PSScriptRoot "src\Setup.cs"
 
-Write-Host "Building AmbientGlow_Setup.exe..." -ForegroundColor Cyan
+Write-Host "Building ProfessionalLighting_Setup.exe..." -ForegroundColor Cyan
 
 & $csc `
     /target:winexe `
@@ -14,7 +14,7 @@ Write-Host "Building AmbientGlow_Setup.exe..." -ForegroundColor Cyan
     "$src"
 
 if ($LASTEXITCODE -eq 0) {
-    Write-Host "OK  -->  AmbientGlow_Setup.exe" -ForegroundColor Green
+    Write-Host "OK  -->  ProfessionalLighting_Setup.exe" -ForegroundColor Green
 } else {
     Write-Host "Build failed (exit $LASTEXITCODE)" -ForegroundColor Red
     exit $LASTEXITCODE

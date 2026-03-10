@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace AmbientGlow
+namespace ProfessionalLighting
 {
     static class Program
     {
@@ -69,8 +69,8 @@ namespace AmbientGlow
                 "MPC-BE", "Shaders");
             sourceSm3   = Path.Combine(exeDir, "shaders", "ProfessionalLighting_SM3.hlsl");
             targetSm3   = Path.Combine(targetDir, "ProfessionalLighting_SM3.hlsl");
-            targetReady = Path.Combine(targetDir, "AmbientGlow_SM3_Ready.hlsl");
-            manifest    = Path.Combine(targetDir, "AmbientGlow_InstallManifest.json");
+            targetReady = Path.Combine(targetDir, "ProfessionalLighting_SM3_Ready.hlsl");
+            manifest    = Path.Combine(targetDir, "ProfessionalLighting_InstallManifest.json");
             prevBackup  = Path.Combine(exeDir, "docs", "ProfessionalLighting_SM3.prev.hlsl");
 
             InitForm();
@@ -219,7 +219,7 @@ namespace AmbientGlow
 
             var lblShaderName = new Label
             {
-                Text      = "AmbientGlow_SM3_Ready.hlsl",
+                Text      = "ProfessionalLighting_SM3_Ready.hlsl",
                 ForeColor = C_CYAN,
                 AutoSize  = true,
                 Location  = new Point(16 + lblStep3.PreferredWidth, 348),
@@ -354,7 +354,7 @@ namespace AmbientGlow
                 string json = "{\r\n" +
                               "  \"installedAt\": \"" + now + "\",\r\n" +
                               "  \"profile\": \"UltraQuality_SM3\",\r\n" +
-                              "  \"files\": [\"ProfessionalLighting_SM3.hlsl\", \"AmbientGlow_SM3_Ready.hlsl\"]\r\n" +
+                              "  \"files\": [\"ProfessionalLighting_SM3.hlsl\", \"ProfessionalLighting_SM3_Ready.hlsl\"]\r\n" +
                               "}";
                 File.WriteAllText(manifest, json, new System.Text.UTF8Encoding(true));
 
@@ -417,8 +417,8 @@ namespace AmbientGlow
         {
             string[] fallback = {
                 "ProfessionalLighting_SM3.hlsl",
-                "AmbientGlow_SM3_Ready.hlsl",
-                "AmbientGlow_InstallManifest.json"
+                "ProfessionalLighting_SM3_Ready.hlsl",
+                "ProfessionalLighting_InstallManifest.json"
             };
 
             if (!File.Exists(manifest)) return fallback;
@@ -430,8 +430,8 @@ namespace AmbientGlow
                 if (items != null && items.Length > 0)
                 {
                     var list = new List<string>(items);
-                    if (!list.Contains("AmbientGlow_InstallManifest.json"))
-                        list.Add("AmbientGlow_InstallManifest.json");
+                    if (!list.Contains("ProfessionalLighting_InstallManifest.json"))
+                        list.Add("ProfessionalLighting_InstallManifest.json");
                     return list.ToArray();
                 }
             }

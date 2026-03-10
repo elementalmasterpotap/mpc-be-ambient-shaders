@@ -13,8 +13,8 @@ $projectRoot    = Split-Path -Parent $MyInvocation.MyCommand.Path
 $sourceSm3      = Join-Path $projectRoot "shaders\ProfessionalLighting_SM3.hlsl"
 $targetDir      = Join-Path $env:APPDATA "MPC-BE\Shaders"
 $targetSm3      = Join-Path $targetDir "ProfessionalLighting_SM3.hlsl"
-$targetReadySm3 = Join-Path $targetDir "AmbientGlow_SM3_Ready.hlsl"
-$manifest       = Join-Path $targetDir "AmbientGlow_InstallManifest.json"
+$targetReadySm3 = Join-Path $targetDir "ProfessionalLighting_SM3_Ready.hlsl"
+$manifest       = Join-Path $targetDir "ProfessionalLighting_InstallManifest.json"
 
 # ─────────────────────────────────────────────────────────────
 #  ЯЗЫК / LANGUAGE
@@ -51,7 +51,7 @@ $T = if ($Lang -eq 'ru') { @{
     NoPromptDest   = "Установка в: $targetDir"
     NoPromptDone   = "Готово. SM3 установлен."
     NoPromptHint   = "MPC-BE -> Вид -> Шейдер -> Постобработка"
-    NoPromptShader = "Выбрать: AmbientGlow_SM3_Ready.hlsl"
+    NoPromptShader = "Выбрать: ProfessionalLighting_SM3_Ready.hlsl"
     ErrNotFound    = "Файл SM3 не найден: $sourceSm3"
     WaitMsg        = "Закроется через {0} сек  ·  любая клавиша — выйти сейчас"
 }} else { @{
@@ -84,7 +84,7 @@ $T = if ($Lang -eq 'ru') { @{
     NoPromptDest   = "Installing to: $targetDir"
     NoPromptDone   = "Done. SM3 installed."
     NoPromptHint   = "MPC-BE -> View -> Shader -> Post-Processing"
-    NoPromptShader = "Select: AmbientGlow_SM3_Ready.hlsl"
+    NoPromptShader = "Select: ProfessionalLighting_SM3_Ready.hlsl"
     ErrNotFound    = "SM3 file not found: $sourceSm3"
     WaitMsg        = "Closing in {0} sec  ·  any key to exit now"
 }}
@@ -168,7 +168,7 @@ function Run-Install {
     $data = [ordered]@{
         installedAt = (Get-Date).ToString("s")
         profile     = "UltraQuality_SM3"
-        files       = @("ProfessionalLighting_SM3.hlsl", "AmbientGlow_SM3_Ready.hlsl")
+        files       = @("ProfessionalLighting_SM3.hlsl", "ProfessionalLighting_SM3_Ready.hlsl")
     }
     $data | ConvertTo-Json -Depth 3 | Set-Content -Path $manifest -Encoding UTF8
 }
@@ -327,8 +327,8 @@ function Show-Progress {
 
     Write-BoxLine $T.FolderReady DarkCyan DarkGreen
     Write-BoxLine "  +  ProfessionalLighting_SM3.hlsl" DarkCyan Gray
-    Write-BoxLine "  +  AmbientGlow_SM3_Ready.hlsl" DarkCyan Cyan
-    Write-BoxLine "  +  AmbientGlow_InstallManifest.json" DarkCyan DarkGray
+    Write-BoxLine "  +  ProfessionalLighting_SM3_Ready.hlsl" DarkCyan Cyan
+    Write-BoxLine "  +  ProfessionalLighting_InstallManifest.json" DarkCyan DarkGray
     Write-BoxEmpty
     Write-BoxDiv
     Write-BoxEmpty
@@ -342,7 +342,7 @@ function Show-Progress {
         Write-BoxLine "  2. View  $cArr  Shader  $cArr  Post-Processing" DarkCyan Gray
         Write-BoxLine $T.GuideStep3 DarkCyan Gray
         Write-BoxEmpty
-        Write-BoxLine "     AmbientGlow_SM3_Ready.hlsl" DarkCyan Cyan
+        Write-BoxLine "     ProfessionalLighting_SM3_Ready.hlsl" DarkCyan Cyan
         Write-BoxLine "     $([char]0x00B7)  SM3, maximum quality" DarkCyan DarkCyan
         Write-BoxEmpty
         Write-BoxLine $T.GuideStep4 DarkCyan Gray
